@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>flex 弹性盒子的运用</title>
+    <style>
+      body {
+        background-color: grey;
+        margin: 0;
+        height: 100vh;
+      }
+      * {
+        /* border: 1px solid black; */
+      }
+      .flex {
+        display: flex;
+      }
+      .fc {
+        flex-direction: column;
+      }
+      .f1 {
+        flex: 1;
+      }
+      .baise {
+        background-color: white;
+      }
+      .mr8 {
+        margin: 8px;
+      }
+      .mrt8 {
+        margin-top: 8px;
+      }
+      .mrr8 {
+        margin-right: 8px;
+      }
+      .yiny {
+        box-shadow: rgb(134, 102, 167);
+      }
+      @media (max-width: 600px) {
+        .cb {
+          display: none;
+        }
+        .nr {
+          flex-direction: column;
+        }
+        .yc {
+          flex-direction: column;
+        }
+        .youqu {
+          margin-left: 8px;
+        }
+        .shuju {
+          margin: 0 0 8px;
+          flex: auto;
+        }
+      }
+    </style>
+  </head>
+  <body class="flex mrr8 mrt8">
+    <!-- 左边侧边栏 -->
+    <div style="width: 150px; z-index: 2" class="cb baise mrr8">
+      <div style="height: 100px; margin-top: 3px">
+        <div
+          style="padding: 1px; align-items: center; justify-content: center"
+          class="flex"
+        >
+          <!-- align-items: center=主轴居中；justify-content: center=交叉轴居中 -->
+          <img src="lo01.jpeg" alt="" width="90" height="90" />
+        </div>
+      </div>
+      <div
+        style="
+          height: 80px;
+          border: 2px solid black;
+          text-align: center;
+          font-size: 60px;
+        "
+      >
+        没
+      </div>
+      <div
+        style="
+          height: 80px;
+          border: 2px solid black;
+          text-align: center;
+          font-size: 60px;
+        "
+      >
+        啥
+      </div>
+      <div
+        style="
+          height: 80px;
+          border: 2px solid black;
+          text-align: center;
+          font-size: 60px;
+        "
+      >
+        可
+      </div>
+      <div
+        style="
+          height: 80px;
+          border: 2px solid black;
+          text-align: center;
+          font-size: 60px;
+        "
+      >
+        写
+      </div>
+      <div
+        style="
+          height: 80px;
+          border: 2px solid black;
+          text-align: center;
+          font-size: 60px;
+        "
+      >
+        的
+      </div>
+      <div
+        style="
+          height: 80px;
+          border: 2px solid black;
+          text-align: center;
+          font-size: 60px;
+          color: blue;
+        "
+      >
+        啊
+      </div>
+    </div>
+    <!-- 右边大区  overflow: auto=在内容区上下滚动-->
+    <div style="overflow: auto" class="fc f1">
+      <!-- 右上小区z-index z轴高度 -->
+      <div style="height: 70px; z-index: 1" class="baise fc mrr8 mr8 yiny">
+        <h1
+          style="
+            color: black;
+            padding: 15px;
+            border: 10px;
+            font-family: 'Times New Roman', Times, serif;
+            text-shadow: 4px 4px 4px 5px;
+            text-align: center;
+          "
+        >
+          没有快乐，自己创造
+        </h1>
+      </div>
+      <!-- 内容区 -->
+      <div class="f1 flex nr">
+        <!-- 内容区中间大区 -->
+        <div style="flex: 3" class="flex fc">
+          <!-- 内容区中间上小区 -->
+          <div style="margin: 2px; text-align: center" class="flex f1 yc">
+            <!--中上小区1  -->
+            <div
+              style="height: 100px"
+              class="shuju f1 baise mrr8 mrt8 mr8 yiny"
+            >
+              <h2 style="color: brown; font-size: 35px">没</h2>
+            </div>
+            <!-- 中上小区2 -->
+            <div
+              style="height: 100px"
+              class="shuju f1 baise mrr8 mrt8 mr8 yiny"
+            >
+              <h2 style="color: blueviolet; font-size: 35px">啥</h2>
+            </div>
+            <!-- 中上小区3 -->
+            <div
+              style="height: 100px"
+              class="shuju f1 baise mrr8 mrt8 mr8 yiny"
+            >
+              <h2 style="font-size: 35px; color: rgb(224, 61, 143)">可</h2>
+            </div>
+            <!-- 中上小区4 -->
+            <div
+              style="height: 100px"
+              class="shuju f1 baise mrr8 mrt8 mr8 yiny"
+            >
+              <h2 style="font-size: 35px; color: rgb(61, 161, 30)">写</h2>
+            </div>
+          </div>
+          <!-- 内容区中间下小区 -->
+          <div style="margin: 2px" class="flex fc">
+            <!-- 内容中间下小区1 -->
+            <div
+              style="color: blueviolet; text-align: center; height: 130px"
+              class="baise mrt8 mr8 yiny"
+            >
+              <a
+                href="https://cn.bing.com/search?pglt=163&q=%E7%99%BE%E5%BA%A6%E7%BF%BB%E8%AF%91&cvid=cec954595f5541b694cde9f2f47e1d9f&gs_lcrp=EgZjaHJvbWUqBggBEAAYQDIGCAAQRRg5MgYIARAAGEAyBggCEAAYQDIGCAMQABhAMgYIBBAAGEAyBggFEAAYQDIGCAYQABhAMgYIBxAAGEAyBggIEAAYQNIBCDgwOTRqMGoxqAIIsAIB&FORM=ANNTA1&adppc=EDGEBRV&PC=EDGEBRV"
+                >我是一个百度翻译的链接</a
+              >
+              <p
+                style="
+                  color: gray;
+                  margin: 15px;
+                  padding: 15px;
+                  text-align: center;
+                  font-size: 18px;
+                "
+              >
+                我试试能不能正常跳转
+              </p>
+            </div>
+            <!-- 内容中间下小区 2-->
+            <div
+              style="height: 130px; text-align: center"
+              class="baise mrt8 mr8 yiny"
+            >
+              <a href="https://www.baidu.com/">我是“百度一下”的链接</a>
+              <p
+                style="
+                  color: rgb(107, 65, 65);
+                  margin: 15px;
+                  padding: 15px;
+                  text-align: center;
+                  font-size: 18px;
+                "
+              >
+                ojbk
+              </p>
+              <input
+                style="text-align: center; color: red"
+                value="no problem"
+              />
+            </div>
+            <!--内容中间下小区  3-->
+            <div style="height: 120px" class="baise mrt8 mr8 yiny"></div>
+            <div style="height: 120px" class="baise mrt8 mr8 yiny"></div>
+            <div style="height: 120px" class="baise mrt8 mr8 yiny"></div>
+            <div style="height: 120px" class="baise mrt8 mr8 yiny"></div>
+            <div style="height: 120px" class="baise mrt8 mr8 yiny"></div>
+          </div>
+        </div>
+        <!-- 内容区右侧侧边栏 -->
+        <div style="flex: 1" class="youqu flex fc mrr8">
+          <!-- 内容区右侧边栏1 -->
+          <div style="height: 200px" class="baise mr8 yiny"></div>
+          <!-- 内容区右侧边栏2 -->
+          <div style="height: 340px" class="baise mr8 yiny"></div>
+          <div style="height: 340px" class="baise mr8 yiny"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
