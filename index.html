@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>flex的初次接触</title>
+    <title>个人网页</title>
     <style>
       body {
         background-color: grey;
@@ -35,17 +35,11 @@
         margin-right: 8px;
       }
       .yiny {
-        box-shadow: rgb(134, 102, 167);
+        box-shadow: rgb(128, 67, 189);
       }
       @media (max-width: 600px) {
         .cb {
           display: none;
-        }
-        .nr {
-          flex-direction: column;
-        }
-        .yc {
-          flex-direction: column;
         }
         .youqu {
           margin-left: 8px;
@@ -56,8 +50,16 @@
         }
       }
     </style>
+    <script>
+      function jojo() {
+        document.getElementById("aha").innerHTML = "我一定能学会!just do it!";
+      }
+      function sj() {
+        document.getElementById("oho").innerHTML = Date();
+      }
+    </script>
   </head>
-  <body class="flex mrr8 mrt8">
+  <body class="flex">
     <!-- 左边侧边栏 -->
     <div style="width: 150px; z-index: 2" class="cb baise mrr8">
       <div style="height: 100px; margin-top: 3px">
@@ -66,7 +68,12 @@
           class="flex"
         >
           <!-- align-items: center=主轴居中；justify-content: center=交叉轴居中 -->
-          <img src="./lo01.jpeg" alt="" width="90" height="90" />
+          <img
+            src="https://c-ssl.dtstatic.com/uploads/blog/202210/05/20221005143052_94ed5.thumb.400_0.jpeg"
+            alt=""
+            width="90"
+            height="90"
+          />
         </div>
       </div>
       <div
@@ -178,9 +185,17 @@
             <!-- 中上小区4 -->
             <div
               style="height: 100px"
-              class="shuju f1 baise mrr8 mrt8 mr8 yiny"
+              class="shuju f1 baise mrr8 mrt8 mr8 yiny;"
+              id="oho"
             >
-              <h2 style="font-size: 35px; color: rgb(61, 161, 30)">写</h2>
+              现在时间
+              <button
+                style="color: rgb(61, 161, 30)"
+                type="button"
+                onclick="sj()"
+              >
+                点我就知道啦
+              </button>
             </div>
           </div>
           <!-- 内容区中间下小区 -->
@@ -229,7 +244,25 @@
               />
             </div>
             <!--内容中间下小区  3-->
-            <div style="height: 120px" class="baise mrt8 mr8 yiny"></div>
+            <div
+              style="
+                height: 120px;
+                padding: 15px;
+                color: blueviolet;
+                font-family: Arial, Helvetica, sans-serif;
+              "
+              class="baise mrt8 mr8 yiny"
+              id="aha"
+            >
+              每天学会一丢丢。每天进步一丢丢。。。
+              <button
+                style="color: tomato; margin: 20px"
+                type="button"
+                onclick="jojo()"
+              >
+                然后呢？
+              </button>
+            </div>
             <div style="height: 120px" class="baise mrt8 mr8 yiny"></div>
             <div style="height: 120px" class="baise mrt8 mr8 yiny"></div>
             <div style="height: 120px" class="baise mrt8 mr8 yiny"></div>
